@@ -6,6 +6,8 @@
 
 This is an [async-http-client](https://github.com/swift-server/async-http-client) based driver for [Papyrus](https://github.com/joshuawright11/papyrus).
 
+You can see the Papyrus documentation in the [main repository](https://github.com/joshuawright11/papyrus).
+
 ## Usage
 
 You can use this Papyrus driver by importing it instead.
@@ -13,8 +15,6 @@ You can use this Papyrus driver by importing it instead.
 ```swift
 import PapyrusAsyncHTTPClient
 ```
-
-You can see the Papyrus documentation in the [main repository](https://github.com/joshuawright11/papyrus).
 
 ### Configuration
 
