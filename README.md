@@ -14,7 +14,7 @@ You can install PapyrusAsyncHTTPClient using the [Swift Package Manager](https:/
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/joshuawright11/papyrus-async-http-client.git", .upToNextMinor(from: "0.1.0"))
+    .package(url: "https://github.com/joshuawright11/papyrus-async-http-client.git", branch: "main")
 ]
 ```
 
