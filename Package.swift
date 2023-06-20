@@ -1,23 +1,39 @@
 // swift-tools-version: 5.9
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
 let package = Package(
-    name: "papyrus-async-http",
+    name: "papyrus-async-http-client",
+    platforms: [
+        .iOS("13.0"),
+        .macOS("10.15"),
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
+        .executable(name: "Example", targets: ["Example"]),
         .library(
-            name: "papyrus-async-http",
-            targets: ["papyrus-async-http"]),
+            name: "PapyrusAsyncHTTPClient",
+            targets: ["PapyrusAsyncHTTPClient"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.9.0"),
+        .package(url: "https://github.com/joshuawright11/papyrus.git", branch: "main"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        .executableTarget(
+            name: "Example",
+            dependencies: [
+                .byName(name: "PapyrusAsyncHTTPClient")
+            ],
+            path: "Example"),
         .target(
-            name: "papyrus-async-http"),
+            name: "PapyrusAsyncHTTPClient",
+            dependencies: [
+                .product(name: "PapyrusCore", package: "papyrus"),
+                .product(name: "AsyncHTTPClient", package: "async-http-client"),
+            ],
+            path: "PapyrusAsyncHTTPClient"
+        ),
         .testTarget(
-            name: "papyrus-async-httpTests",
-            dependencies: ["papyrus-async-http"]),
+            name: "PapyrusAsyncHTTPClientTests",
+            dependencies: ["PapyrusAsyncHTTPClient"]),
     ]
 )
