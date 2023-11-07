@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/joshuawright11/papyrus.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "5d3e5c95acbc37952ddf6177ebff75b164141efc"
+        "revision" : "947317c075a9ddfe0a5402660e7d06f9f14e25a6",
+        "version" : "0.6.0"
       }
     },
     {
@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "49b3bbdf3b7b044f2a512c67bdb2da0bbd31342f"
+        "revision" : "6ad4ea24b01559dde0773e3d091f1b9e36175036",
+        "version" : "509.0.2"
       }
     }
   ],

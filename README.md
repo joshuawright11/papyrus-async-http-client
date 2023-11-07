@@ -32,7 +32,7 @@ Under the hood, PapyrusAsyncHTTPClient uses [async-http-client](https://github.c
 
 ```swift
 let customClient: HTTPClient = ...
-let provider = Provider(baseURL: "https://api.github.com", client: customClient)
+let provider = Provider(baseURL: "https://api.github.com", httpClient: customClient)
 let github: GitHub = GitHubAPI(provider: provider)
 ```
 

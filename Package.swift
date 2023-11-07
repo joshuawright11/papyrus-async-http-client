@@ -8,32 +8,25 @@ let package = Package(
         .macOS("10.15"),
     ],
     products: [
-        .executable(name: "Example", targets: ["Example"]),
         .library(
             name: "PapyrusAsyncHTTPClient",
-            targets: ["PapyrusAsyncHTTPClient"]),
+            targets: [
+                "PapyrusAsyncHTTPClient"
+            ]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.9.0"),
-        .package(url: "https://github.com/joshuawright11/papyrus.git", branch: "main"),
+        .package(url: "https://github.com/joshuawright11/papyrus.git", from: "0.6.0"),
     ],
     targets: [
-        .executableTarget(
-            name: "Example",
-            dependencies: [
-                .byName(name: "PapyrusAsyncHTTPClient")
-            ],
-            path: "Example"),
         .target(
             name: "PapyrusAsyncHTTPClient",
             dependencies: [
-                .product(name: "PapyrusCore", package: "papyrus"),
                 .product(name: "AsyncHTTPClient", package: "async-http-client"),
+                .product(name: "PapyrusCore", package: "papyrus"),
             ],
             path: "PapyrusAsyncHTTPClient"
         ),
-        .testTarget(
-            name: "PapyrusAsyncHTTPClientTests",
-            dependencies: ["PapyrusAsyncHTTPClient"]),
     ]
 )
