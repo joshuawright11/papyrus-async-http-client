@@ -13,9 +13,7 @@ You can see the Papyrus documentation in the [main repository](https://github.co
 You can install PapyrusAsyncHTTPClient using the [Swift Package Manager](https://www.swift.org/package-manager/).
 
 ```swift
-dependencies: [
-    .package(url: "https://github.com/joshuawright11/papyrus-async-http-client.git", branch: "main")
-]
+.package(url: "https://github.com/joshuawright11/papyrus-async-http-client.git", from: "0.2.0")
 ```
 
 ## Usage
